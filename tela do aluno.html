@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>LiberAção</title>
+
+    <link rel="stylesheet"
+          href="./style.telaaluno.css">
+</head>
+
+<body>
+
+    <div class="upper-content">
+
+        <!-- CABEÇALHO -->
+
+        <header class="top-bar">
+
+            <div class="logo-text">
+                🍴 LiberAção
+            </div>
+
+            <div class="header-actions">
+
+                <span id="profileName">
+                    Aluno
+                </span>
+
+                <button
+                    id="logoutButton"
+                    type="button">
+                    Sair
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- INFORMAÇÕES DO ALUNO -->
+
+        <section class="header-section">
+
+            <h1 id="welcomeMessage">
+                Bem-vindo!
+            </h1>
+
+            <p id="turmaAluno">
+                Sua turma
+            </p>
+
+            <p id="dataAtual"></p>
+
+        </section>
+
+        <!-- FILA DE LIBERAÇÃO -->
+
+        <main class="main-content">
+
+            <h2>
+                Fila de Liberação por Série
+            </h2>
+
+            <div class="cards-row">
+
+                <!-- PRIMEIRA SÉRIE -->
+
+                <section class="card">
+
+                    <div class="card-header">
+                        1ª Série
+                    </div>
+
+                    <div
+                        class="card-rows"
+                        id="fila1">
+
+                        <p class="loading">
+                            Carregando turmas...
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <!-- SEGUNDA SÉRIE -->
+
+                <section class="card">
+
+                    <div class="card-header">
+                        2ª Série
+                    </div>
+
+                    <div
+                        class="card-rows"
+                        id="fila2">
+
+                        <p class="loading">
+                            Carregando turmas...
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <!-- TERCEIRA SÉRIE -->
+
+                <section class="card">
+
+                    <div class="card-header">
+                        3ª Série
+                    </div>
+
+                    <div
+                        class="card-rows"
+                        id="fila3">
+
+                        <p class="loading">
+                            Carregando turmas...
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- BOTÃO DE SITUAÇÃO DO ALUNO -->
+
+    <div
+        class="status-banner-container"
+        id="statusContainer">
+
+        <div
+            class="status-banner status-aguardando"
+            id="statusBanner">
+
+            <span id="statusIcon">●</span>
+
+            <span id="statusMensagem">
+                Verificando situação da sua turma...
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script
+        src="./js/aluno.js"
+        defer>
+    </script>
+
+</body>
+
+</html>

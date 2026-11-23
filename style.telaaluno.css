@@ -1,0 +1,446 @@
+
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f5f8;
+    color: #1b2a4a;
+    min-height: 100vh;
+}
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
+
+.upper-content {
+    width: 100%;
+    padding: 0 3.2% 120px;
+}
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.top-bar {
+    width: calc(100% + 6.4%);
+    min-height: 62px;
+    margin-left: -3.2%;
+
+    background: #0d2341;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 32px;
+    gap: 15px;
+    color: white;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 800;
+    color: white;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+#profileName {
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+}
+
+#logoutButton {
+    background: transparent;
+    color: white;
+
+    border: 1px solid white;
+    padding: 10px 18px;
+    border-radius: 7px;
+
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+#logoutButton:hover {
+    background: white;
+    color: #0d2341;
+}
+
+/* =========================================
+   INFORMAÇÕES DO ALUNO
+========================================= */
+
+.header-section {
+    padding: 42px 0 25px;
+}
+
+.header-section h1 {
+    font-size: 29px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #1b2a4a;
+}
+
+.header-section p {
+    margin-top: 7px;
+    font-size: 14px;
+    color: #7f8c9d;
+}
+
+#turmaAluno {
+    font-size: 15px;
+    font-weight: 800;
+    color: #53647d;
+}
+
+#dataAtual {
+    font-size: 14px;
+}
+
+/* =========================================
+   TÍTULO DA FILA
+========================================= */
+
+.main-content h2 {
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 19px;
+    color: #1b2a4a;
+}
+
+/* =========================================
+   COLUNAS DAS SÉRIES
+========================================= */
+
+.cards-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+/* =========================================
+   CARTÕES
+========================================= */
+
+.card {
+    background: white;
+
+    border: 1px solid #dedede;
+    border-radius: 12px;
+
+    padding: 20px;
+    min-width: 0;
+
+    box-shadow: 0 2px 7px rgba(27, 42, 74, 0.05);
+}
+
+/* TÍTULOS DAS SÉRIES */
+
+.card-header {
+    background: transparent;
+    color: #102747;
+
+    font-weight: 800;
+    font-size: 17px;
+
+    text-align: left;
+
+    padding: 0 0 13px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+/* =========================================
+   ÁREA DAS TURMAS
+========================================= */
+
+.card-rows {
+    padding: 12px 0 0;
+    min-height: 65px;
+}
+
+/* =========================================
+   LINHAS DAS TURMAS
+========================================= */
+
+.queue-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    min-height: 60px;
+
+    padding: 10px 12px;
+    margin-bottom: 8px;
+
+    background: #ffffff;
+
+    border: 1px solid #dedede;
+    border-radius: 9px;
+}
+
+.queue-row:last-child {
+    margin-bottom: 0;
+}
+
+.time-class {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 5px;
+
+    min-width: 0;
+    flex: 1;
+}
+
+/* HORÁRIO */
+
+.time {
+    font-size: 12px;
+    color: #64728a;
+    font-weight: 500;
+}
+
+/* NOME DA TURMA */
+
+.class-name {
+    font-size: 13px;
+    font-weight: 800;
+    color: #102747;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================
+   STATUS DAS TURMAS
+========================================= */
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+
+    border-radius: 6px;
+    padding: 7px 12px;
+
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* TURMA LIBERADA */
+
+.liberada {
+    background: #2e8138;
+    color: white;
+}
+
+/* TURMA AGUARDANDO */
+
+.aguardando {
+    background: #102747;
+    color: white;
+}
+
+/* =========================================
+   CARREGAMENTO E ERROS
+========================================= */
+
+.loading,
+.error-message,
+.empty-message {
+    text-align: center;
+    padding: 22px 8px;
+    font-size: 13px;
+    color: #7f8c9d;
+}
+
+.error-message {
+    color: #bd3030;
+}
+
+/* =========================================
+   RODAPÉ TRANSPARENTE
+   NÃO EXISTE FAIXA VERDE
+========================================= */
+
+#statusContainer {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    z-index: 999;
+}
+
+/* =========================================
+   BOTÃO DE STATUS
+========================================= */
+
+#statusBanner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    width: min(90%, 480px);
+    min-height: 55px;
+
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+
+    text-align: center;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+/* LIBERADA - VERDE */
+
+#statusBanner.status-liberado {
+    background: #22a85a !important;
+    color: white !important;
+}
+
+/* AGUARDANDO - VERMELHO */
+
+#statusBanner.status-aguardando {
+    background: #df2929 !important;
+    color: white !important;
+}
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .cards-row {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================================
+   CELULARES
+========================================= */
+
+@media (max-width: 600px) {
+
+    .upper-content {
+        padding: 0 14px 110px;
+    }
+
+    .top-bar {
+        width: calc(100% + 28px);
+        margin-left: -14px;
+        padding: 12px 14px;
+        flex-wrap: wrap;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+    #profileName {
+        font-size: 12px;
+        font-weight: 800;
+    }
+
+    #logoutButton {
+        padding: 8px 12px;
+    }
+
+    .header-section {
+        padding: 30px 0 22px;
+    }
+
+    .header-section h1 {
+        font-size: 22px;
+    }
+
+    #turmaAluno {
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    .main-content h2 {
+        font-size: 19px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card-header {
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    .queue-row {
+        padding: 10px;
+        gap: 7px;
+    }
+
+    .class-name {
+        font-size: 12px;
+    }
+
+    .status-badge {
+        padding: 7px 8px;
+        font-size: 9px;
+    }
+
+    #statusContainer {
+        height: 75px;
+    }
+
+    #statusBanner {
+        width: 95%;
+        min-height: 50px;
+        font-size: 13px;
+        padding: 12px;
+    }
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Fila Almoço - CEEP PLG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+  <div class="dashboard-container">
+
+    <!-- CABEÇALHO -->
+    <header>
+      <div class="header-left">
+        <h1 class="header-title">
+          Sistema Automatizado de Liberação da Fila do Almoço  –  CEEP-PLG
+        </h1>
+      </div>
+      <div class="header-right">
+        <div class="user-profile">
+          <div class="avatar" id="user-avatar">--</div>
+          <div class="user-info">
+            <span class="user-name" id="user-name">
+              Carregando...
+            </span>
+            <span class="user-role" id="user-role">
+              Supervisor(a)
+            </span>
+          </div>
+        </div>
+        <button class="btn-sair" onclick="navegarPara('sair')">
+          Sair
+        </button>
+      </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="dashboard-body">
+
+      <!-- INDICADORES -->
+      <section class="kpi-row">
+        <div class="kpi-card">
+          <div class="kpi-header">
+            📋 Turmas aguardando
+          </div>
+          <div class="kpi-value" id="kpi-aguardando">
+            12
+          </div>
+        </div>
+        <div class="kpi-card active">
+          <div class="kpi-header">
+            🍽️ Turma liberada
+          </div>
+          <div class="kpi-value highlight" id="kpi-ultima-liberada">
+            Nenhuma
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header">
+            ➡️ Próxima turma
+          </div>
+          <div class="kpi-value" id="kpi-proxima">
+            -
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-header">
+            📊 Liberações realizadas hoje
+          </div>
+          <div class="kpi-value" id="kpi-realizadas">
+            0/12
+          </div>
+        </div>
+      </section>
+
+      <!-- FILAS DE LIBERAÇÃO -->
+      <section class="queue-section">
+        <h2 class="section-title">
+          Fila de Liberação por Série
+        </h2>
+        <div class="queues-row">
+
+          <!-- 1ª SÉRIE -->
+          <div class="queue-column" data-serie="1ª Série">
+            <div class="column-header">
+              1ª Série
+            </div>
+            <div class="class-list">
+              <div class="class-row">
+                <div class="row-info">
+                  <span class="time">11:45</span>
+                  <span class="class-name">1ª A Informática</span>
+                </div>
+                <div class="action-group"></div>
+              </div>
+              <div class="class-row">
+                <div class="row-info">
+                  <span class="time">11:50</span>
+                  <span class="class-name">1ª A Redes de Computadores</span>
+                </div>
+                <div class="action-group"></div>
+              </div>
+              <div class="class-row">
+                <div class="row-info">
+                  <span class="time">11:55</span>
+                  <span class="class-name">1ª B Informática</span>
+                </div>
+                <div class="action-group"></div>
+              </div>
+              <div class="class-row">
+                <div class="row-info">
+                  <span class="time">12:00</span>
+                  <span class="class-name">1ª B Redes de Computadores</span>
+                </div>
+                <div class="action-group"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2ª SÉRIE -->
+          <div class="queue-column" data-serie="2ª Série">
+            <div class="column-header">
+              2ª Série
+            </div>
+            <div class="class-list">
+              <div class="class-row">
+                <div class="row-info">
+                  <span class="time">11:45</span>
+                  <span class="class-name">2ª A Informática</span>
+                </div>
+                <div class="action-group"></div>
+              </div>
+              <div class="class-row">
+                <div class="row-info">
+                  <span class="time">11:50</span>
+                  <span class="class-name">2ª A Redes de Computadores</span>
+                </div>
+                <div class="action-group"></div>
+              </div>
+              <div class="class-row">
+                <div class="row-info">
+                  <span class="time">11:55</span>
+                  <span class="class-name">2ª B Informática</span>
+                </div>
+                <div class="action-group"></div>
+              </div>
+              <div class="class-row">
+                <div class="row-info">
+                  <span class="time">12:00</span>
+                  <span class="class-name">2ª B Redes de Computadores</span>
+                </div>
+                <div class="action-group"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3ª SÉRIE -->
+          <div class="queue-column" data-serie="3ª Série">
+            <div class="column-header">
+              3ª Série
+            </div>
+            <div class="class-list">
+              <div class="class-row">
+                <div class="row-info">
+                  <span class="time">11:45</span>
+                  <span class="class-name">3ª A Informática</span>
+                </div>
+                <div class="action-group"></div>
+              </div>
+              <div class="class-row">
+                <div class="row-info">
+                  <span class="time">11:50</span>
+                  <span class="class-name">3ª A Redes de Computadores</span>
+                </div>
+                <div class="action-group"></div>
+              </div>
+              <div class="class-row">
+                <div class="row-info">
+                  <span class="time">11:55</span>
+                  <span class="class-name">3ª B Informática</span>
+                </div>
+                <div class="action-group"></div>
+              </div>
+              <div class="class-row">
+                <div class="row-info">
+                  <span class="time">12:00</span>
+                  <span class="class-name">3ª B Redes de Computadores</span>
+                </div>
+                <div class="action-group"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- JAVASCRIPT EXTERNO -->
+  <script src="js/liberação.js" defer></script>
+</body>
+
+</html>

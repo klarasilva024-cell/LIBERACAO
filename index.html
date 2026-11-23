@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEEP - Sistema Acadêmico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="liberacao-login">
+        <section class="left-panel">
+            <div class="bg-decorations">
+                <div class="circle-top"></div>
+                <div class="circle-bottom"></div>
+                <div class="grid-lines">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="left-header">
+                <div class="graduation-cap">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9L12 4L21 9L12 14L3 9Z" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M7 11.5V16C7 16 9.2 19 12 19C14.8 19 17 16 17 16V11.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M21 9V14" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <span class="institution">
+                    Liber<span class="acao">AÇÃO</span>
+                </span>
+            </div>
+            <div class="center-focal">
+                <div class="brand-title-area">
+                    <div class="brand-title">
+                        Liber<span class="acao">AÇÃO</span>
+                    </div>
+                    <div class="brand-subtitle">
+                        Sistema Automatizado de Liberação da Fila do Almoço
+                    </div>
+                </div>
+            </div>
+            <div class="left-footer-meta">
+                <div class="version">Sistema Acadêmico</div>
+            </div>
+        </section>
+
+        <section class="right-panel">
+            <div class="spacer-top"></div>
+            <div class="login-card">
+                
+<!-- Abas -->
+<div class="tab-switcher">
+
+    <button type="button" class="tab" id="tab-alunos" onclick="selecionarAba('aluno')">
+        Aluno
+    </button>
+
+    <button type="button" class="tab" id="tab-professor" onclick="selecionarAba('professor')">
+        Professor
+    </button>
+
+    <button type="button" class="tab active" id="tab-supervisora" onclick="selecionarAba('supervisora')">
+        Supervisora
+    </button>
+
+</div>
+
+
+                <div class="form-content">
+                    <div class="title-group">
+                        <div class="title" id="titulo">Acesso restrito</div>
+                        <div class="subtitle" id="subtitulo">Entre com suas credenciais para continuar.</div>
+                    </div>
+
+                    <form class="form" onsubmit="entrar(event)">
+                        <div class="field-container">
+                            <label class="field-label" for="usuario">Usuário</label>
+                            <div class="input-box">
+                                <svg class="input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="8" r="3.5" stroke="#64748B" stroke-width="2"/>
+                                    <path d="M5 20C5.8 16.8 8.3 15 12 15C15.7 15 18.2 16.8 19 20" stroke="#64748B" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <input type="text" id="usuario" placeholder="Digite sua matrícula" autocomplete="username">
+                            </div>
+                        </div>
+
+                        <div class="field-container">
+                            <label class="field-label" for="senha">Senha</label>
+                            <div class="input-box">
+                                <svg class="input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="5" y="10" width="14" height="10" rx="2" stroke="#64748B" stroke-width="2"/>
+                                    <path d="M8 10V7C8 4.8 9.8 3 12 3C14.2 3 16 4.8 16 7V10" stroke="#64748B" stroke-width="2"/>
+                                    <circle cx="12" cy="15" r="1" fill="#64748B"/>
+                                </svg>
+                                <input type="password" id="senha" placeholder="Digite sua senha" autocomplete="current-password">
+                                <button type="button" class="eye-button" onclick="mostrarSenha()">
+                                    <svg id="eye" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.5 12C4.5 8.5 7.8 6.5 12 6.5C16.2 6.5 19.5 8.5 21.5 12C19.5 15.5 16.2 17.5 12 17.5C7.8 17.5 4.5 15.5 2.5 12Z" stroke="#64748B" stroke-width="2"/>
+                                        <circle cx="12" cy="12" r="2.5" stroke="#64748B" stroke-width="2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="action-container">
+                            <button type="submit" class="submit-button">Entrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <footer class="right-footer">
+                <div class="footer-info">©️ 2026 CEEP • Sistema Acadêmico</div>
+            </footer>
+        </section>
+    </main>
+    <script src="./js/index.js"></script>
+</body>
+</html>
